@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_package = "io.grpc.examples";
+
+package vip_services;
+
+// The greeter service definition.
+service DoumiBApply {
+  // Sends a greeting
+  rpc GetOneByApplyId (ApplyIdRequest) returns (ApplyIdReply) {}
+  rpc GetAllByApplyUid (ApplyUidRequest) returns (ApplyUidReply) {}
+}
+
+message ApplyIdRequest {
+  int32 apply_id = 1;
+}
+
+message ApplyIdReply {
+  string apply_info = 1;
+}
+
+message ApplyUidRequest {
+  string user_id = 1;
+}
+
+message ApplyUidReply {
+  string apply_info = 1;
+}
